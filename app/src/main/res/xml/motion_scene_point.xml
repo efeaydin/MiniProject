@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@+id/constraint_set_start"
+        app:constraintSetEnd="@+id/constraint_set_end"
+        app:duration="1000">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                app:motionTarget="@id/text_view_add_point"
+                app:framePosition="80"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_view_current_point"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_current_point"
+                android:alpha="1"
+                />
+
+            <KeyAttribute
+                app:motionTarget="@id/text_view_add_point"
+                app:framePosition="100"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/text_view_current_point"
+                app:layout_constraintBottom_toBottomOf="@id/text_view_current_point"
+                android:alpha="0"
+                />
+
+        </KeyFrameSet>
+
+    </Transition>
+
+    <ConstraintSet
+        android:id="@+id/constraint_set_start">
+
+        <Constraint
+            android:id="@id/text_view_add_point"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/button_take_photo"
+            app:layout_constraintBottom_toBottomOf="@id/button_take_photo"
+            />
+
+    </ConstraintSet>
+
+    <ConstraintSet
+        android:id="@+id/constraint_set_end">
+
+        <Constraint
+            android:id="@id/text_view_add_point"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_view_current_point"
+            app:layout_constraintBottom_toBottomOf="@id/text_view_current_point"
+            />
+
+    </ConstraintSet>
+
+</MotionScene>
